@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — SynthNerd</title>
+  <meta name="description" content="Privacy Policy for SynthNerd — no tracking cookies, privacy-friendly analytics, and clear affiliate disclosure.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Space Grotesk', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    :root { color-scheme: dark; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+      background-color: #030307;
+      background-image: 
+        radial-gradient(1200px 800px at 80% -10%, rgba(139,92,246,0.18), transparent 60%),
+        radial-gradient(900px 600px at -10% 20%, rgba(6,182,212,0.15), transparent 55%),
+        radial-gradient(800px 500px at 50% 120%, rgba(124,58,237,0.12), transparent 60%);
+      background-attachment: fixed;
+    }
+    .grid-bg::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: 
+        linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+      background-size: 72px 72px;
+      mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .glass {
+      backdrop-filter: blur(20px) saturate(130%);
+      -webkit-backdrop-filter: blur(20px) saturate(130%);
+    }
+    .neon-text {
+      background: linear-gradient(90deg, #a855f7, #22d3ee 70%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .glow {
+      box-shadow: 0 0 40px rgba(139,92,246,0.15), 0 0 80px rgba(34,211,238,0.1);
+    }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #030307; }
+    ::-webkit-scrollbar-thumb { background: #27272a; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #3f3f46; }
+  </style>
+</head>
+<body class="grid-bg bg-[#030307] text-zinc-200 antialiased selection:bg-violet-500/30 selection:text-white">
+  <!-- Nav -->
+  <nav class="sticky top-0 z-50 border-b border-white/[0.06] bg-[#030307]/70 glass">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex h-[68px] items-center justify-between">
+        <a href="/" class="flex items-center gap-3 group">
+          <div class="relative h-9 w-9 rounded-xl bg-gradient-to-br from-violet-600 to-cyan-400 flex items-center justify-center glow transition-transform group-hover:scale-105">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="text-black/80">
+              <path d="M4 9.5c3-1 5.5-.5 7 1.5 2-3 5-4 8-3v5c-3-1-5.5-.5-7 1.5-2-3-5-4-8-3v-2Z" fill="currentColor"/>
+              <path d="M4 14.5c3-1 5.5-.5 7 1.5 2-3 5-4 8-3" stroke="white" stroke-opacity="0.9" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+            </svg>
+            <div class="absolute inset-0 rounded-xl bg-gradient-to-br from-violet-600 to-cyan-400 blur-xl opacity-40 -z-10"></div>
+          </div>
+          <span class="text-[22px] font-semibold tracking-tight">Synth<span class="neon-text">Nerd</span></span>
+        </a>
+
+        <div class="hidden md:flex items-center gap-8 text-[15px]">
+          <a href="/" class="text-zinc-400 hover:text-white transition">Home</a>
+          <a href="/tools" class="text-zinc-400 hover:text-white transition">Tools</a>
+          <a href="/reviews" class="text-zinc-400 hover:text-white transition">Reviews</a>
+          <a href="/guides" class="text-zinc-400 hover:text-white transition">Guides</a>
+          <a href="/newsletter" class="text-zinc-400 hover:text-white transition">Newsletter</a>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <a href="/newsletter" class="hidden sm:inline-flex items-center gap-2 px-4 h-9 rounded-full bg-white/[0.06] hover:bg-white/[0.1] border border-white/10 text-sm transition">
+            <span class="h-1.5 w-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
+            Subscribe
+          </a>
+          <button id="menuBtn" class="md:hidden h-9 w-9 grid place-items-center rounded-lg bg-white/5 border border-white/10">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden hidden border-t border-white/5 bg-black/40 glass">
+      <div class="px-4 py-3 space-y-1 text-[15px]">
+        <a href="/" class="block py-2 text-zinc-300">Home</a>
+        <a href="/tools" class="block py-2 text-zinc-300">Tools</a>
+        <a href="/reviews" class="block py-2 text-zinc-300">Reviews</a>
+        <a href="/guides" class="block py-2 text-zinc-300">Guides</a>
+        <a href="/newsletter" class="block py-2 text-zinc-300">Newsletter</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main -->
+  <main class="relative z-10">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-24 pb-24">
+      <!-- Header -->
+      <div class="mb-10">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.04] border border-white/10 backdrop-blur-md">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
+          </span>
+          <span class="text-xs tracking-wide text-zinc-300">Privacy-first, by design</span>
+        </div>
+        <h1 class="mt-6 text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight leading-[1.05]">
+          Privacy <span class="neon-text">Policy</span>
+        </h1>
+        <p class="mt-4 text-zinc-400 max-w-xl">We build SynthNerd for humans, not trackers. Here's exactly what we collect — and what we don't.</p>
+        <p class="mt-2 text-sm text-zinc-500">Last updated: January 8, 2025</p>
+      </div>
+
+      <!-- Glass Card -->
+      <div class="relative">
+        <div class="absolute -inset-0.5 bg-gradient-to-b from-violet-500/20 to-cyan-500/20 rounded-[28px] blur-2xl opacity-50"></div>
+        <article class="relative rounded-[24px] border border-white/10 bg-white/[0.02] glass shadow-2xl shadow-black/60">
+          <div class="p-6 sm:p-10 md:p-12">
+
+            <!-- TL;DR -->
+            <div class="mb-12 p-5 rounded-2xl bg-gradient-to-br from-violet-500/10 to-cyan-500/10 border border-violet-500/20">
+              <h2 class="text-sm font-semibold uppercase tracking-widest text-violet-300/90 mb-2">TL;DR</h2>
+              <p class="text-zinc-200 leading-relaxed">No cookies. No cross-site tracking. No creepy profiles. We use <strong class="text-white">Plausible Analytics</strong> (cookie-free) to see basic traffic, and we disclose affiliate links. That's it.</p>
+            </div>
+
+            <div class="space-y-12 text-[15.5px] leading-[1.8] text-zinc-300">
+              
+              <section>
+                <h2 class="text-xl font-semibold text-white mb-3 flex items-center gap-2">
+                  <span class="h-6 w-6 rounded-lg bg-white/5 border border-white/10 grid place-items-center">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-cyan-400"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  </span>
+                  No Tracking Cookies
+                </h2>
+                <p>SynthNerd does not use tracking cookies, fingerprinting, or third-party ad pixels. We don't sell your data, and we don't buy data about you. We don't need it.</p>
+                <p class="mt-3 text-zinc-400">Essential, first-party cookies are only used if you log in or set preferences (currently: none). If that changes, we'll update this page.</p>
+              </section>
+
+              <section>
+                <h2 class="text-xl font-semibold text-white mb-3 flex items-center gap-2">
+                  <span class="h-6 w-6 rounded-lg bg-white/5 border border-white/10 grid place-items-center">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-violet-400"><path d="M3 3v18h18"/><path d="M7 14l3-3 4 4 3-5 3 3"/></svg>
+                  </span>
+                  Analytics — Plausible
+                </h2>
+                <p>We use <a href="https://plausible.io" target="_blank" rel="noopener" class="underline decoration-violet-500/40 underline-offset-4 hover:text-white transition">Plausible Analytics</a>, a privacy-friendly, EU-hosted alternative to Google Analytics. It's cookie-free, doesn't collect personal data, and doesn't track you across sites.</p>
+                <ul class="mt-3 space-y-2 text-zinc-400 list-disc pl-5 marker:text-zinc-600">
+                  <li>Measures: page views, referrers, countries (approximate), devices — all aggregated</li>
+                  <li>No IP storage, no personal identifiers, no cross-site tracking</li>
+                  <li>Data is retained for 12 months, then auto-deleted</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 class="text-xl font-semibold text-white mb-3 flex items-center gap-2">
+                  <span class="h-6 w-6 rounded-lg bg-white/5 border border-white/10 grid place-items-center">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-cyan-400"><path d="M12 2l3 7h7l-5.5 4 2 7-6.5-4.5-6.5 4.5 2-7L2 9h7z"/></svg>
+                  </span>
+                  Affiliate Links Disclosure
+                </h2>
+                <p>Some links on SynthNerd are affiliate links. If you click and buy, we may earn a commission — at no extra cost to you. We only recommend tools we actually test and use.</p>
+                <p class="mt-3 text-zinc-400">Affiliate programs may set their own first-party cookies when you visit a merchant site. We don't control that, but we mark affiliate links clearly across the site.</p>
+              </section>
+
+              <section>
+                <h2 class="text-xl font-semibold text-white mb-3 flex items-center gap-2">
+                  <span class="h-6 w-6 rounded-lg bg-white/5 border border-white/10 grid place-items-center">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-violet-400"><path d="M4 4h16v12H5l-1 4V4z"/></svg>
+                  </span>
+                  Newsletter
+                </h2>
+                <p>Our newsletter is optional. If you subscribe, we store only your email address (via our email provider) to send you updates. No profiling, no sharing, no selling.</p>
+                <ul class="mt-3 space-y-2 text-zinc-400 list-disc pl-5 marker:text-zinc-600">
+                  <li>You can unsubscribe anytime with one click</li>
+                  <li>We send max 2 emails per week, usually 1</li>
+                  <li>We don't track opens with invisible pixels</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 class="text-xl font-semibold text-white mb-3">Your Rights</h2>
+                <p class="text-zinc-300">You're in control. Email us at <button id="copyEmail" class="underline decoration-cyan-500/40 underline-offset-4 hover:text-white transition">hello@synthnerd.com</button> for any of the following:</p>
+                <div class="mt-4 grid sm:grid-cols-2 gap-3 text-sm">
+                  <div class="p-3 rounded-xl bg-white/[0.03] border border-white/5">Access or export your data</div>
+                  <div class="p-3 rounded-xl bg-white/[0.03] border border-white/5">Correct inaccurate data</div>
+                  <div class="p-3 rounded-xl bg-white/[0.03] border border-white/5">Delete your newsletter subscription</div>
+                  <div class="p-3 rounded-xl bg-white/[0.03] border border-white/5">Ask anything about privacy</div>
+                </div>
+              </section>
+
+              <section class="pt-8 border-t border-white/10">
+                <h2 class="text-xl font-semibold text-white mb-3">Contact</h2>
+                <p>Questions? Concerns? Good memes? Reach out:</p>
+                <div class="mt-4 flex flex-wrap items-center gap-3">
+                  <a href="mailto:hello@synthnerd.com" class="group inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-violet-600/90 to-cyan-500/90 text-black font-medium hover:from-violet-500 hover:to-cyan-400 transition shadow-lg shadow-violet-900/20">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z" opacity="0"/><path d="M4 8l8 5 8-5"/><rect x="3" y="4" width="18" height="14" rx="2"/></svg>
+                    hello@synthnerd.com
+                  </a>
+                  <span class="text-xs text-zinc-500">We reply within 48h, usually faster.</span>
+                </div>
+              </section>
+
+            </div>
+
+            <!-- Footer note -->
+            <div class="mt-14 pt-6 border-t border-white/5 flex items-center justify-between text-xs text-zinc-500">
+              <p>SynthNerd is a privacy-first publication.</p>
+              <a href="/" class="hover:text-zinc-300 transition">← Back to home</a>
+            </div>
+
+          </div>
+        </article>
+      </div>
+
+      <!-- Trust badges -->
+      <div class="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-3">
+        <div class="p-4 rounded-2xl bg-white/[0.02] border border-white/10 glass flex items-center gap-3">
+          <div class="h-8 w-8 rounded-lg bg-emerald-500/15 text-emerald-400 grid place-items-center border border-emerald-500/20">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+          </div>
+          <div><div class="text-sm text-white">No cookies</div><div class="text-xs text-zinc-500">Zero tracking</div></div>
+        </div>
+        <div class="p-4 rounded-2xl bg-white/[0.02] border border-white/10 glass flex items-center gap-3">
+          <div class="h-8 w-8 rounded-lg bg-violet-500/15 text-violet-400 grid place-items-center border border-violet-500/20">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7z"/></svg>
+          </div>
+          <div><div class="text-sm text-white">EU-hosted analytics</div><div class="text-xs text-zinc-500">Plausible</div></div>
+        </div>
+        <div class="p-4 rounded-2xl bg-white/[0.02] border border-white/10 glass flex items-center gap-3">
+          <div class="h-8 w-8 rounded-lg bg-cyan-500/15 text-cyan-400 grid place-items-center border border-cyan-500/20">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div><div class="text-sm text-white">Transparent</div><div class="text-xs text-zinc-500">Clear affiliate disclosure</div></div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="relative z-10 border-t border-white/5 bg-[#050507]/70 glass">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-3">
+          <div class="h-8 w-8 rounded-lg bg-gradient-to-br from-violet-600 to-cyan-400 flex items-center justify-center">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="text-black/80">
+              <path d="M4 9.5c3-1 5.5-.5 7 1.5 2-3 5-4 8-3v5c-3-1-5.5-.5-7 1.5-2-3-5-4-8-3v-2Z" fill="currentColor"/>
+            </svg>
+          </div>
+          <div>
+            <div class="text-sm font-medium">Synth<span class="neon-text">Nerd</span></div>
+            <div class="text-xs text-zinc-500">© 2025 SynthNerd. Built for nerds, not trackers.</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-6 text-sm">
+          <a href="/privacy.html" class="text-white">Privacy</a>
+          <a href="/terms" class="text-zinc-400 hover:text-white transition">Terms</a>
+          <a href="/about" class="text-zinc-400 hover:text-white transition">About</a>
+          <a href="mailto:hello@synthnerd.com" class="text-zinc-400 hover:text-white transition">Contact</a>
+          <a href="https://x.com" target="_blank" rel="noopener" class="text-zinc-500 hover:text-white transition" aria-label="X">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 3H22l-7.5 8.6L23 21h-6.9l-5.4-6.9L4.3 21H1l8-9.1L1.5 3h7l4.9 6.3L18.9 3z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 px-4 py-2.5 rounded-xl bg-white text-black text-sm font-medium shadow-2xl opacity-0 pointer-events-none transition-all duration-300 translate-y-3">
+    Email copied to clipboard
+  </div>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn?.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    const copyBtn = document.getElementById('copyEmail');
+    const toast = document.getElementById('toast');
+    copyBtn?.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText('hello@synthnerd.com');
+        toast.style.opacity = '1';
+        toast.style.transform = 'translate(-50%, 0)';
+        toast.style.pointerEvents = 'auto';
+        setTimeout(() => {
+          toast.style.opacity = '0';
+          toast.style.transform = 'translate(-50%, 12px)';
+        }, 2000);
+      } catch (e) {
+        window.location.href = 'mailto:hello@synthnerd.com';
+      }
+    });
+  </script>
+</body>
+</html>
